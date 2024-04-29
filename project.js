@@ -57,6 +57,5 @@ function Calculate() {
         categoryElement.textContent = "OverWeight"; 
     }else if (result > 39.99){ 
         categoryElement.textContent = "Obese";
-        alert("Please Take Care Of Yourself.") 
     }
 }
