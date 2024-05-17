@@ -28,8 +28,6 @@ td,th{
 }
 label{
     font-size: 40px;
-    padding: 20px;
-
 }
 #btn{
     font-size: 30px;
@@ -73,13 +71,15 @@ p{
 
 @media screen and (max-width:600px) {
     h1{
-        font-size: 50px;
+        font-size: 75px;
+        margin-left: 70px;
     }
     table {
         margin: auto;
       }
-      label{
+    label{
         font-size: 25px;
+        margin-left: 25px;
     }
     #container{
         display: grid; 
@@ -87,14 +87,15 @@ p{
     .input{
         font-size: 15px;
         width: 50px;
+        margin-left: 5px;
     }
     #btn{
         font-size: 20px;
         margin-left: 61px;
     }
     .selector{
-        font-size: 9px;
-        width: 42px;
+        font-size: 12px;
+        width: 50px;
         border-radius: 3px;
     }
     .calc{
