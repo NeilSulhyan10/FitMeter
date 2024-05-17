@@ -1,3 +1,4 @@
+/* Last Update : 12:00 pm 17/05/24 */
 body{
     background-color: #A1D6E2;
 }
@@ -72,14 +73,14 @@ p{
 @media screen and (max-width:600px) {
     h1{
         font-size: 75px;
-        margin-left: 70px;
+        margin-left: 60px;
     }
     table {
         margin: auto;
       }
     label{
         font-size: 25px;
-        margin-left: 15px;
+        margin-left: 17px;
     }
     #container{
         display: grid; 
@@ -91,7 +92,7 @@ p{
     }
     #btn{
         font-size: 20px;
-        margin-left: 61px;
+        margin-left: 66px;
     }
     .selector{
         font-size: 12px;
