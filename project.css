@@ -93,7 +93,8 @@ p{
         margin-left: 61px;
     }
     .selector{
-        font-size: 12px;
+        font-size: 9px;
+        width: 42px;
         border-radius: 3px;
     }
     .calc{
