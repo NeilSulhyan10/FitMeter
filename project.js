@@ -22,6 +22,17 @@ function heightchanger(){
     document.getElementById("height").value=x.toFixed(2);
 }
 
+function imageUpdate(src){
+    let image = document.querySelector("#answer img");
+    if(!image){
+    image = document.createElement("img");
+    image.height = 275;
+    image.width = 150;
+    document.getElementById("answer").appendChild(image);
+    }
+    image.src = src;
+}
+
 function Calculate() {
     let w = parseFloat(document.getElementById("weight").value);
     let h = parseFloat(document.getElementById("height").value);
@@ -48,14 +59,36 @@ function Calculate() {
         alert("Please select KG with Feet.");
     }
 
-    let categoryElement = document.getElementById("category");
-    if (result <= 18.4){
-        categoryElement.textContent = "Underweight";
-    }else if (result > 18.4 && result <= 24.99){ 
-        categoryElement.textContent = "Normal"; 
+    if (result <= 18.49){
+        category.textContent = "Underweight";
+        imageUpdate("Normal.png");
+    }else if (result > 18.49 && result <= 24.99){ 
+        category.textContent = "Normal"; 
+        imageUpdate("Normal.png");
     }else if (result > 24.99 && result <= 39.99){ 
-        categoryElement.textContent = "OverWeight"; 
+        category.textContent = "OverWeight"; 
+        imageUpdate("Overweight.png");
     }else if (result > 39.99){ 
-        categoryElement.textContent = "Obese";
+        category.textContent = "Obese";
+        imageUpdate("Obese.png");
     }
+     
+    let analyze,diff;
+    if(sel1==="KG" && sel2==="Feet"){
+    if(result > 24.99){
+        analyze = (24.99 * Math.pow(h,2))/10.736;
+        diff = w - analyze;
+        document.getElementById("analyzeBMI").textContent = `Reduce your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
+    }else{
+        document.getElementById("analyzeBMI").textContent = ``;
+    } 
+  }else if(sel1==="Pound" && sel2==="Inch"){
+    if(result > 24.99){
+        analyze = (24.99 * Math.pow(h,2))/703;
+        diff = w - analyze;
+        document.getElementById("analyzeBMI").textContent = `Reduce your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
+    }else{
+        document.getElementById("analyzeBMI").textContent = ``; 
+  }
+  }
 }
