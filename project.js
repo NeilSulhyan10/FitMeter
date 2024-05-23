@@ -61,16 +61,16 @@ function Calculate() {
 
     if (result <= 18.49){
         category.textContent = "Underweight";
-        imageUpdate("Normal.png");
+        imageUpdate("\images\Underweight.png");
     }else if (result > 18.49 && result <= 24.99){ 
         category.textContent = "Normal"; 
-        imageUpdate("Normal.png");
+        imageUpdate("\images\Normal.png");
     }else if (result > 24.99 && result <= 39.99){ 
         category.textContent = "OverWeight"; 
-        imageUpdate("Overweight.png");
+        imageUpdate("\images\Overweight.png");
     }else if (result > 39.99){ 
         category.textContent = "Obese";
-        imageUpdate("Obese.png");
+        imageUpdate("\images\Obese.png");
     }
      
     let analyze,diff;
