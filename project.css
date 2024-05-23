@@ -1,10 +1,10 @@
-/* Last Update : 12:00 pm 17/05/24 */
+/* Last Update : 06:00 pm 23/05/24 */
 body{
     background-color: #A1D6E2;
 }
 h1{
     font-size: 150px;
-    margin-left: 31%;
+    margin-left: 30%;
     color: white;
     font-family:'Playfair Display';
     font-weight: 150;
@@ -14,7 +14,7 @@ h1{
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    margin-left: 38%;
+    margin-left: 490px;
     font-size: 25px;
     background-color: #F1F1F2;
   }
@@ -23,7 +23,7 @@ td,th{
 }
 .calc{
     border: 3px solid #F1F1F2;
-    width: auto;
+    width: 550px;
     padding: 25px;
     border-radius: 15px;
 }
@@ -59,15 +59,19 @@ p{
 
 #container{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    margin-left: 26%;
 }
 
 .answer{
     border: 3px solid #F1F1F2;
-    width: 300px;
+    width: 550px;
     border-radius: 15px;
     align-content: center;
     text-align: center;
+    margin-top: 2%;
+    padding: 25px;
 }
 
 @media screen and (max-width:600px) {
@@ -99,7 +103,12 @@ p{
         width: 50px;
         border-radius: 3px;
     }
-    .calc{
+    .calc,.answer{
         width: 250px;
+        margin-left: 1px;
     }
+    #container{
+        margin-left: 10px;
+    }
+    
 }
