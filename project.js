@@ -61,7 +61,7 @@ function Calculate() {
 
     if (result <= 18.49){
         category.textContent = "Underweight";
-        imageUpdate("images/Underweight.png");
+        imageUpdate("Underweight.png");
     }else if (result > 18.49 && result <= 24.99){ 
         category.textContent = "Normal"; 
         imageUpdate("Normal.png");
