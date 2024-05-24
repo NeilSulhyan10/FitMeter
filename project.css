@@ -1,4 +1,4 @@
-/* Last Update : 10:00 pm 24/05/24 */
+/* Last Update : 11:00 pm 24/05/24 */
 body{
     background-color: white;
 }
@@ -84,7 +84,6 @@ footer{
     font-size: 30px;
     color: #A1D6E2;
     font-family:'Playfair Display';
-    /* margin-left: 36%; */
     margin-top: 10px;
     text-shadow: 1px 1px #60b46f;
 }
@@ -93,7 +92,7 @@ footer{
 @media screen and (max-width:600px) {
     h1{
         font-size: 75px;
-        margin-left: 60px;
+        margin-left: 57px;
     }
     table {
         margin: auto;
@@ -125,6 +124,9 @@ footer{
     }
     #container{
         margin-left: 10px;
+    }
+    footer{
+        font-size: 23px;
     }
     
 }
