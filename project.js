@@ -34,6 +34,17 @@ function imageUpdate(src){
 }
 
 function Calculate() {
+    const radios = document.getElementsByName("sex");
+    let sex;
+    for(const radio of radios){
+      if(radio.checked){
+          sex = radio.value;
+          break;
+      }
+    }
+    if(!sex){
+        alert("Please Select Your Gender.");
+    }else{
     let w = parseFloat(document.getElementById("weight").value);
     let h = parseFloat(document.getElementById("height").value);
 
@@ -76,9 +87,13 @@ function Calculate() {
     let analyze,diff;
     if(sel1==="KG" && sel2==="Feet"){
     if(result > 24.99){
-        analyze = (24.99 * Math.pow(h,2))/10.736;
+        analyze = (24.99 * Math.pow(h,2))/10.764;
         diff = w - analyze;
         document.getElementById("analyzeBMI").textContent = `Reduce your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
+    }else if(result<18.5){
+        analyze = (18.5 * Math.pow(h,2))/10.764;
+        diff = analyze - w;
+        document.getElementById("analyzeBMI").textContent = `Increase your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
     }else{
         document.getElementById("analyzeBMI").textContent = ``;
     } 
@@ -87,8 +102,34 @@ function Calculate() {
         analyze = (24.99 * Math.pow(h,2))/703;
         diff = w - analyze;
         document.getElementById("analyzeBMI").textContent = `Reduce your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
+    }else if(result<18.5){
+        analyze = (18.5 * Math.pow(h,2))/703;
+        diff = analyze - w;
+        document.getElementById("analyzeBMI").textContent = `Increase your weight by ${diff.toFixed(4)} to be in normal BMI category.` ;
     }else{
         document.getElementById("analyzeBMI").textContent = ``; 
   }
   }
+  if(sex === "Male"){
+    if (result <= 18.49){
+        imageUpdate("Underweight.png");
+    }else if (result > 18.49 && result <= 24.99){ 
+        imageUpdate("Normal.png");
+    }else if (result > 24.99 && result <= 39.99){ 
+        imageUpdate("Overweight.png");
+    }else if (result > 39.99){ 
+        imageUpdate("Obese.png");
+    }
+  }else if(sex === "Female"){
+    if (result <= 18.49){
+        imageUpdate("Underweightf.png");
+    }else if (result > 18.49 && result <= 24.99){ 
+        imageUpdate("Normalf.png");
+    }else if (result > 24.99 && result <= 39.99){ 
+        imageUpdate("Overweightf.png");
+    }else if (result > 39.99){ 
+        imageUpdate("Obesef.png");
+    }
+  }  
+ }
 }
