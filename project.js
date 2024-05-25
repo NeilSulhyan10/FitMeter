@@ -69,17 +69,21 @@ function Calculate() {
     }else if(sel1==="KG" && sel2==="Inch"){
         alert("Please select KG with Feet.");
     }
-
+    
     if (result <= 18.49){
+        category.style.color = 'rgb(244, 244, 144)';
         category.textContent = "Underweight";
         imageUpdate("Underweight.png");
     }else if (result > 18.49 && result <= 24.99){ 
+        category.style.color = 'rgb(0, 105, 0)';
         category.textContent = "Normal"; 
         imageUpdate("Normal.png");
     }else if (result > 24.99 && result <= 39.99){ 
+        category.style.color = 'orange';
         category.textContent = "OverWeight"; 
         imageUpdate("Overweight.png");
     }else if (result > 39.99){ 
+        category.style.color = 'orangered';
         category.textContent = "Obese";
         imageUpdate("Obese.png");
     }
@@ -131,5 +135,15 @@ function Calculate() {
         imageUpdate("Obesef.png");
     }
   }  
+
+  let totalCalories = diff * 7700;
+  let calorieDeficit = totalCalories / 183; 
+  if(result >24.99){
+    document.getElementById("Calorie").textContent = `You should be ${calorieDeficit.toFixed(2)} kcal deficit everyday for 6-months to reduce your weight and be in Normal Category `;
+  }else if(result<18.5){
+    document.getElementById("Calorie").textContent = `You should be ${calorieDeficit.toFixed(2)} kcal surplus everyday for 6-months to increase your weight and be in Normal Category `;
+  }else{
+    document.getElementById("Calorie").textContent = ``;
+  }
  }
-}
+} 
