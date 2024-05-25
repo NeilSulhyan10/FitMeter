@@ -1,4 +1,4 @@
-/* Last Update : 11:00 pm 24/05/24 */
+/* Last Update : 11:00 am 25/05/24 */
 body{
     background-color: white;
 }
@@ -88,6 +88,9 @@ footer{
     text-shadow: 1px 1px #60b46f;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 
 @media screen and (max-width:600px) {
     h1{
