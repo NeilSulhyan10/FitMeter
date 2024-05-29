@@ -93,11 +93,11 @@ function Calculate() {
     if(result > 24.99){
         analyze = (24.99 * Math.pow(h,2))/10.764;
         diff = w - analyze;
-        document.getElementById("analyzeBMI").textContent = `Reduce your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
+        document.getElementById("analyzeBMI").textContent = `Reduce your weight by ${diff.toFixed(4)} KG's to be in normal BMI category.` ; 
     }else if(result<18.5){
         analyze = (18.5 * Math.pow(h,2))/10.764;
         diff = analyze - w;
-        document.getElementById("analyzeBMI").textContent = `Increase your weight by ${diff.toFixed(4)} to be in normal BMI category.` ; 
+        document.getElementById("analyzeBMI").textContent = `Increase your weight by ${diff.toFixed(4)} Pound's to be in normal BMI category.` ; 
     }else{
         document.getElementById("analyzeBMI").textContent = ``;
     } 
